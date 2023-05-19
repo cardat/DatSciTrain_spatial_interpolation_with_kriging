@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="c0e17d1a-13c5-47e4-809c-932957b48c80" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <dataset>
+    <title>NMMAPS_weather_city_subset_1987_2000</title>
+    <creator id="https://orcid.org/0000-0002-6360-6793">
+      <individualName>
+        <givenName>Ivan</givenName>
+        <surName>Hanigan</surName>
+      </individualName>
+      <electronicMailAddress>ivan.hanigan@gmail.com</electronicMailAddress>
+    </creator>
+    <pubDate>2022</pubDate>
+    <abstract>The data set contains daily weather (tmpd: daily mean temperature (degrees Fahrenheit), dptp: Dew point temperature, rhum: Mean relative humidity) for NMMAPS city subset as defined for Ivan Hanigan's private study in the period 1987-2000 from the National Morbidity, Mortality and Air Pollution Study (NMMAPS).  This is a subset of the larger dataset that was once able to be freely downloaded. This file was prepared to enable students to practice merging mortality and weather files.</abstract>
+    <intellectualRights>This dataset is released to students for training purposes only. Please keep the designated Contact person informed of any plans to use the dataset. Consultation or collaboration with the original investigators is strongly encouraged. Publications and data products should not make use of this version of the dataset. The complete dataset used to be available at the Internet-based Health and Air Pollution Surveillance System (iHAPSS) website, or through the packages NMMAPSdata or NMMAPSlite. Currently, the data are not available any more and the two packages have been archived.</intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>NMMAPS city subset as defined for Ivan Hanigan's private study</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-118.2437</westBoundingCoordinate>
+          <eastBoundingCoordinate>-71.0598</eastBoundingCoordinate>
+          <northBoundingCoordinate>43.161</northBoundingCoordinate>
+          <southBoundingCoordinate>27.9506</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>1987-01-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2000-12-31</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>Species</taxonRankName>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+    <contact>
+      <individualName>
+        <givenName>Ivan</givenName>
+        <surName>Hanigan</surName>
+      </individualName>
+      <organizationName>Curtin University</organizationName>
+      <phone>000-000-0000</phone>
+      <electronicMailAddress>ivan.hanigan@gmail.com</electronicMailAddress>
+    </contact>
+  </dataset>
+</eml:eml>
