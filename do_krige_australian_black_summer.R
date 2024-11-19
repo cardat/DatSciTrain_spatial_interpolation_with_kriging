@@ -17,7 +17,6 @@
 library(data.table)
 library(sf)
 library(gstat)
-library(rgdal)
 library(sp)
 library(automap)
 library(raster)
@@ -74,11 +73,11 @@ setDF(indat2)
 plot(indat2[,xname], indat2[,yname], col = heat.colors(nrow(indat2)), pch = 16)
 
 # set up the projection info
-epsg <- make_EPSG()
-str(epsg)
 # make spatial
 input_data <- SpatialPointsDataFrame(coords = indat2[,c(xname, yname)],
-                                     indat2, proj4string = CRS(epsg[epsg$code == 4326,"prj4"]))
+                                     indat2, 
+                                     proj4string = sp::CRS("+proj=longlat +datum=WGS84 +no_defs"))
+
 str(input_data@data)
 proj4string(input_data)
 
@@ -106,7 +105,7 @@ y.range <- c(bb[2] - 0.2, bb[4] + 0.2)
 ## CUSTOM EXTENT
 ##x.range <- c(150.25, 151.4) 
 ##y.range <- c(-34.3, -33.3)
-## set resolution 0.25 degrees or about 25km
+## set resolution 0.005 degrees or about 500m
 res <- 0.005
 grd <- expand.grid(x = seq(from = x.range[1], to = x.range[2], by = res),
                    y = seq(from = y.range[1], to = y.range[2], by = res))  
