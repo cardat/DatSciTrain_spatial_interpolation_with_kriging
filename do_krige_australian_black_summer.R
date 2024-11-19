@@ -1,17 +1,19 @@
-#' @title do krige
-#' @description a kriging model is useful to interpolate spatial data
-#' from points to a surface. This is a Stretch Goal for the PUBH3007
-#' Module 01 computer lab
-#' @return a raster surface in R and saved to a geotiff file
-#' @param infile_spatial file path to spatial data
-#' @param infile_source file path to the input data
-#' @param outputfilename file path to output geotiff file 
-#' @param var variable name of column in mon_data 
-#' @param xname  "long"
-#' @param yname  "lat"
-#' @param city_i choose one city to inspect visually
-#' @param year_i choose the year to use for subset
-#' @param month_i choose the month to use for subset
+# title do krige
+# description a kriging model is useful to interpolate spatial data
+#   from points to a surface. 
+# returns a raster surface in R and saved to a geotiff file
+
+# other notes:
+# infile_spatial file path to spatial data
+# infile_source file path to the input data
+# outputfilename file path to output geotiff file 
+# var variable name of column in mon_data 
+# xname  "long"
+# yname  "lat"
+# city_i choose one city to inspect visually
+# year_i choose the year to use for subset
+# month_i choose the month to use for subset
+
 
 #### functions ####
 library(data.table)
