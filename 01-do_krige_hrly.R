@@ -17,6 +17,7 @@
 
 #### functions ####
 library(data.table)
+library(sp)
 library(terra)
 library(sf)
 library(stars)
@@ -38,12 +39,6 @@ response_var <- "pm25"
 # Sydney region
 study_bounds <- c(xmin = 149.4719, ymin = -34.83117, 
                   xmax = 152.1305, ymax = -32.49607)
-year_i <- 2019
-month_i <- 12
-day_i <- 10
-hour_i <- 2
-datetime_i <- as.POSIXct(paste0(year_i, "-", month_i, "-", day_i, " ", hour_i, ":00"),
-                         tz = "UTC")
 
 ######################################################################
 
@@ -63,7 +58,6 @@ str(sf.mons)
 
 ## Select data and make ready for input spatial
 insp <- sf.mons[(sf.mons$variable == response_var &
-                   sf.mons$date_time_utc == datetime_i &
                    !is.na(value)), ]
 insp <- st_crop(insp, st_bbox(study_bounds, crs = 4283))
 plot(insp["value"], pch = 16, axes = T)
