@@ -65,13 +65,14 @@ str(sf.mons)
 insp <- sf.mons[(sf.mons$variable == response_var &
                    sf.mons$date_time_utc == datetime_i &
                    !is.na(value)), ]
-# insp <- st_crop(insp, st_bbox(study_bounds, crs = 4283))
+insp <- st_crop(insp, st_bbox(study_bounds, crs = 4283))
 plot(insp["value"], pch = 16, axes = T)
 
 
 
 #### do kriging ####
-## This is how to autofit a variogram using the automap package
+## This is how to autofit a variogram using the automap package, requires use of SpatialPointsDataFrame
+insp <- as(insp, "Spatial")
 fmla <- reformulate('1', response = value)
 vmod <- autofitVariogram(formula = fmla, 
                          input_data = insp)
